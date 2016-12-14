@@ -8,9 +8,8 @@ RUN echo "add_header 'Access-Control-Allow-Origin' '*';\n\
 	  && apt-get install --no-install-recommends --no-install-suggests -y \
 	  			curl \
 				git  \
-&& curl -o /tmp/mg.latest.tar.gz http://mediagoom.com/assets/mg.latest.tar.gz \ 
-&& tar -C /tmp -xvzf /tmp/mg.latest.tar.gz  \
-&& mv /tmp/bitbucket/release/src/mgcli/mg /usr/local/bin/mg \
+&& curl -O https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/mg \ 
+&& chmod +x mg  \
+&& mv ./mg /usr/local/bin/mg \
 && rm -rf /var/lib/apt/lists/* \
-&& rm -rf /tmp/* \
 && git clone https://github.com/mediagoom/Play.git /usr/share/nginx/html/play
