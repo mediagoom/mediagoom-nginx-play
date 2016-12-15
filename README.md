@@ -18,7 +18,8 @@ Now you can start producing and play your media.
 
 For instance use this script to download some ready files and publish them in mpeg-dash:
 
-`cat <<EOF > dash.sh
+```
+cat <<EOF > dash.sh
 #!/bin/bash
 
 url=https://dl.dropboxusercontent.com/u/33964970/bbb.tar
@@ -59,7 +60,7 @@ done
 mg \$cmd
 
 EOF
-`
+```
 
 Then run `bash -c ./dash.sh` 
 When mg finish you can point your browser to http://localhost/index.html?src=dash to play your content in mpeg-dash.
