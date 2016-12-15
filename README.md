@@ -10,7 +10,8 @@ just remove `-p 80:80`.
 If you want to be able to exchange files with your docker you can use the following 
 command to share the /tmp dir.
 
-`docker run -i -t  --name mg -v /tmp:/tmp -p 88:80 mediagoom/nginx-play /bin/bash`
+`docker run -i -t  --name mg -v /tmp:/tmp -p 80:80 mediagoom/nginx-play /bin/bash`
+
 
 
 ```bash
