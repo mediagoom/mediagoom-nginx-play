@@ -64,10 +64,9 @@ For instance use this script to download some ready files and publish them in mp
 	chmod +x dash.sh
 
 
+Then run `./dash.sh`
 
-Then run `bash -c ./dash.sh` 
-When mg finish you can point your browser to http://localhost/index.html?src=dash to play your content in mpeg-dash.
+When mg finish you can start nginx to server your content: `nginx -g 'daemon off;'`
 
-```bash
-docker build -t mg .
-```
+Then point your browser to `http://<container ip or localhost>/play/index.html?src=/dash` to play your content in mpeg-dash.
+
