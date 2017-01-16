@@ -14,7 +14,7 @@ declare -a br=('750' '1200' '2000' '3500' '320' '120')
 l=${#arr[@]}
 ou="/usr/share/nginx/html/dash"
 if [ -d "$ou" ]; then rm "$ou/*"; else mkdir $ou; fi
-cmd="-k:ssf -o:$ou"
+cmd="-k:adaptive -o:$ou"
 for (( c=0; c<$l; c++ ))
 do  
 if [ "$c" == "0" ]; then cmd+=" -s:0 -e:0 -i:"; else cmd+=" -j:"; fi
