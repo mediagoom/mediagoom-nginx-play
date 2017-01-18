@@ -1,7 +1,7 @@
 FROM nginx:mainline
 
 ENV WORKING_DIR /tmp
-ARG URL=https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/mg 
+ARG URL=https://github.com/mediagoom/mg/releases/download/v0.1.3/mg 
 
 WORKDIR ${WORKING_DIR}   
 
